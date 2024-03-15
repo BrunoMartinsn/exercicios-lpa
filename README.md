@@ -29,11 +29,11 @@ composer update
 ```
 4. Iniciando o servidor
 ```
-php artisan serve --port=80
+code .
 ```
 5. Acessar o Visual studio Code 
 ```
-code .
+php artisan serve --port=80
 ```
 6. Importar o arquivo do Insomnia
 
