@@ -133,3 +133,24 @@ Route::get( 'exercicio2', function (Request $request){
     $resultado = $preço * $quanto;
     return $resultado;
      });
+
+     Route::get('receber/nome/idade', function (Request $request){
+        $nome = $request->input('nome');
+        $idade = $request->input('idade');
+        return 'meu nome é' . $nome . ', tenho ' . $idade . 'anos';
+     });
+
+     Route::get('receber/nome/idade', function (Request $request){
+        $idade = $request->input('idade');
+        $retorno = "";
+        if($idade >= 18){
+            $retorno = "maior de idade";
+        }
+        else{
+            $retorno  = "menor de idade";
+        }
+        return $retorno;
+
+     });
+
+
