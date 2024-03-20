@@ -153,4 +153,91 @@ Route::get( 'exercicio2', function (Request $request){
 
      });
 
+     Route::get('receber/nome/idade', function(Request $request){
+        $idade = $request->input('idade');
+        
+        if($idade >= 18){
+           return "maior de idade";
+        } else {
+            return "menor de idade";
+        }
+
+     });
+
+     Route::get('verificar/par', function(Request $request){
+       $numero  = $request->input('numero');
+       if($numero % 2 == 0){
+           return 'par';
+       } else {
+        return 'inpar';
+       }
+
+     });
+
+     Route::get('usuario', function(Request $request){
+        $numero = $request->input('numero');
+        
+        if($numero > 10){
+           return "maior que 10";
+        } else {
+            return "menor que 10";
+        }
+
+     });
+
+     Route::get('temperatura', function(Request $request){
+        $TemperaturaAtual = $request->input('TemperaturaAtual');
+        
+        if($TemperaturaAtual > 30){
+           return "esta quente";
+        } else {
+            return "esta frio";
+        }
+
+     });
+
+     Route::get('verificar', function(Request $request){
+        $numero  = $request->input('numero');
+        if($numero > 0){
+            return 'positivo';
+                } else if($numero < 0){
+                    return 'este numero é negativo';
+                } else {
+                    return 'este numero é zero';
+                }
+            });
+
+            Route::get('usuario', function(Request $request){
+                $numero1 = $request->input('numero1');
+                $numero2 = $request->input('numero2');
+                if($numero1 > $numero2){
+                    return 'maior exibir o numero um';
+                } else {
+                    return 'menor exibir o numero dois';
+                }
+                });
+
+                Route::get('usuario', function(Request $request){
+                   $numero = $request->input('numero');
+                   $resto = ($numero % 3)
+
+                   if($resto == 0){
+                    return "é divisivel por tres";
+                   } else {
+                    return "nao é divisivel por tres";
+                   }
+                    });
+    
+
+
+
+     
+
+     
+
+     
+
+
+    
+
 
